@@ -1,0 +1,491 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "monserrat";
+}
+
+
+
+@font-face
+{
+    font-family: 'monserrat';
+    src: url(text/Montserrat-VariableFont_wght.ttf);
+}
+
+h2{
+    color: #fff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#87C4FF,#fff);
+
+
+}
+
+.container{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    border: 2px solid #87C4FF;
+    box-shadow: 0 0 25px #87C4FF;
+    overflow: hidden;
+}
+
+.container .form-box{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-box.Login input[type="text"],
+.form-box.Login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: none;
+    color: black; /* Warna teks hitam */
+    border-radius: 5px; /*agar tempat untuk input menjadi round*/
+}
+
+.form-box.Login{
+    left: 0;
+    padding: 0 40px;
+}
+.form-box.Login label{
+    margin-bottom: 5px;
+}
+
+
+.form-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+
+.form-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+    transition: .5s;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+    border-bottom: 2px solid #87C4FF;
+}
+
+.input-box label {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box input:placeholder-shown + label {
+    top: -5px;
+    color: #fff;
+}
+
+
+.input-box i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i{
+    color: #87C4FF;
+}
+
+.btn{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #87C4FF;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#fff,#87C4FF,#fff,#87C4FF);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn:hover::before{
+    top: 0;
+}
+
+.regi-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.regi-link a{
+    text-decoration: none;
+    color: rgb(18, 18, 244);
+    font-weight: 600;
+}
+
+.regi-link a:hover{
+    text-decoration: underline;
+}
+
+.info-content{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-content.Login{
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.info-content.Register{
+    display: none;
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.info-content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.info-content p{
+    font-size: 16px;
+}
+
+/*FOR LINE ITALIC IN THE MIDLE*/
+.container .curved-shape{
+    position: absolute;
+    right: 0;
+    top: -5px;
+    height: 600px;
+    width: 850px;
+    background: linear-gradient(45deg, #25252b, #87C4FF);
+    transform: rotate(8deg) skewY(42deg);
+    transform-origin: bottom right;
+}
+
+
+
+/*DATA WISATA(saat tulisan dibawah card di klik),greece.html , indonesia.html*/
+.wista_list
+{
+    text-align: center;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing:border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(assets/bali.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+/*INDONESIA*/
+.card_I_1{
+    background-image: url(/assets/indonesia/bali.jpeg);
+}
+.card_I_2{
+    background-image: url(/assets/indonesia/labuhan_bajo.jpg);
+}
+.card_I_3{
+    background-image: url(/assets/indonesia/raja_ampat.jpeg);
+}
+.card_I_4{
+    background-image: url(/assets/indonesia/pulau_komodo.jpg);
+}
+.card_I_5{
+    background-image: url(/assets/indonesia/yogyakarta.jpeg);
+}
+.card_I_6{
+    background-image: url(/assets/indonesia/jakarta.jpeg);
+}
+.card_I_7{
+    background-image: url(/assets/indonesia/surabaya.jpg);
+}
+
+/*GREECE*/
+.card_G_1{
+    background-image: url(/assets/greece/athena.png);
+}
+.card_G_2{
+    background-image: url(/assets/greece/delphi.png);
+}
+.card_G_3{
+    background-image: url(/assets/greece/meteora.png);
+}
+.card_G_4{
+    background-image: url(/assets/greece/mykonos.png);
+}
+.card_G_5{
+    background-image: url(/assets/greece/olympia.png);
+}
+
+/*ITALY*/
+.card_IT_1{
+    background-image: url(/assets/italy/colosseum.jpg);
+}
+.card_IT_2{
+    background-image: url(/assets/italy/pantheon.jpg);
+}
+.card_IT_3{
+    background-image: url(/assets/italy/rabbit_each.jpg);
+}
+.card_IT_4{
+    background-image: url(/assets/italy/pisa_tower.jpg);
+}
+
+
+/*USA*/
+.card_U_1{
+    background-image: url(/assets/USA/grand_canyon.jpg);
+}
+.card_U_2{
+    background-image: url(/assets/USA/liberty.jpg);
+}
+.card_U_3{
+    background-image: url(/assets/USA/White-House.jpg);
+}
+.card_U_4{
+    background-image: url(/assets/USA/Waikiki.jpeg);
+}
+
+/*THAILAND*/
+.card_T_1{
+    background-image: url(/assets/thailand/chiang_rai.webp);
+}
+.card_T_2{
+    background-image: url(/assets/thailand/koh_samui.webp);
+}
+.card_T_3{
+    background-image: url(/assets/thailand/koh_similan.webp);
+}
+.card_T_4{
+    background-image: url(/assets/thailand/phuket.webp);
+}
+.card_T_5{
+    background-image: url(/assets/thailand/shukothai.webp);
+}
+
+.header_wisata {
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+}
+.header_wisata h1 {
+    margin: 0;
+    color: #333;
+    text-align: left;
+}
+.btn-back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back-home:hover {
+    background-color: #d32f2f; /* Warna latar belakang tombol saat dihover */
+}
+
+
+.wisata_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly /* Menyusun kartu dengan jarak di antara */
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+
+/*booking*/
+/*bookng.php*/
+.booking-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.booking-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="number"],
+select,
+input[type="submit"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23007bff" d="M6 8L0 0h12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 0;
+    border-radius: 3px;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+  a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+/*tiket*/
+/* style.css */
+  .ticket-info {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .ticket-info h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  .ticket-info p {
+    margin: 8px 0;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+
+  .ticket-info p{
+    color: black;
+  }
+
+
+
+
+
+
